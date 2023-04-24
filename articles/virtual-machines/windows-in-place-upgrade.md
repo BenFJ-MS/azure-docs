@@ -52,7 +52,7 @@ We recommend that you create a snapshot of your operating system disk and any da
  
 ## Create upgrade media disk
 
-To start an in-place upgrade the upgrade media must be attached to the VM as a Managed Disk. To create the upgrade media, modify the variables in the following PowerShell script for Windows Server 2022. The upgrade media disk can be used to upgrade multiple VMs, but it can only be used to upgrade a single VM at a time. To upgrade multiple VMs simultaneously multiple upgrade disks must be created for each simultaneous upgrade.
+To start an in-place upgrade the upgrade media must be attached to the VM as a Managed Disk. To create the upgrade media, modify the variables in the following example PowerShell script for a Windows Server 2022 upgrade. The upgrade media disk can be used to upgrade multiple VMs, but it can only be used to upgrade a single VM at a time. To upgrade multiple VMs simultaneously, multiple upgrade disks must be created for each simultaneous upgrade.
 
 | Parameter | Definition |
 |---|---|
@@ -80,7 +80,7 @@ $zone = ""
 # Disk name for the that will be created
 $diskName = "WindowsServer2022UpgradeDisk"
 
-# Target version for the upgrade - must be either server2022Upgrade or server2019Upgrade
+# Target version for the upgrade - must be either server2016upgrade, server2019upgrade or server2022upgrade
 $sku = "server2022Upgrade"
 
 
